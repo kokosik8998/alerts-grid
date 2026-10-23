@@ -54,7 +54,7 @@
 [Desktop Entry]
 Type=Application
 Name=AlertsGrid
-Exec=sh -c "cd /home/kokosik/alerts-grid && npm start"
+Exec=sh -c "cd /home/username/alerts-grid && npm start"
 X-GNOME-Autostart-enabled=true
 ```
 
@@ -62,7 +62,7 @@ X-GNOME-Autostart-enabled=true
 
 > ⚠️ **Про продуктивність.** Чотири карти Chromium одночасно — відчутне навантаження.
 > На Pi 4/5 (2 ГБ+) працює нормально. На **Pi 3B+ (1 ГБ RAM)** може гальмувати або
-> не вистачати пам'яті — тоді залиш 1–2 карти в `MAPS` або додай swap.
+> не вистачати пам'яті. 
 
 ---
 
