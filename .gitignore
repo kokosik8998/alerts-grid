@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# Нативний macOS-застосунок (збирається через build.sh)
+AlertsGrid.app/
+AppIcon.icns
+AppIcon.iconset/
+
+# Electron: залежності та зібрані інсталятори/пакунки
+electron/node_modules/
+electron/dist/
+
+# Різне
+*.log

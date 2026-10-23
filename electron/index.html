@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <title>Карти повітряних тривог</title>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'">
+  <style>
+    :root { color-scheme: dark; }
+    html, body { margin: 0; height: 100%; background: #000; overflow: hidden;
+                 font-family: -apple-system, "Segoe UI", Roboto, sans-serif; }
+    #grid { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr;
+            gap: 1px; height: 100vh; background: #000; }
+    .pane { display: flex; flex-direction: column; background: #000; min-width: 0; min-height: 0; }
+    .bar  { height: 26px; flex: 0 0 26px; display: flex; align-items: center;
+            justify-content: space-between; padding: 0 6px 0 10px; background: #1a1a1a;
+            color: #fff; font-size: 12px; font-weight: 600; user-select: none; }
+    .bar .name { cursor: default; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .bar .ctrls { display: flex; align-items: center; gap: 1px; flex: 0 0 auto; }
+    .bar button { background: transparent; border: 0; color: #fff; font-size: 14px;
+                  cursor: pointer; padding: 2px 7px; line-height: 1; border-radius: 4px; }
+    .bar button:hover { color: #ffb020; background: rgba(255,255,255,0.08); }
+    .bar .pct { font-size: 10px; font-weight: 500; color: #9aa4b2; min-width: 32px;
+                text-align: center; font-variant-numeric: tabular-nums; }
+    webview { flex: 1 1 auto; width: 100%; border: 0; }
+  </style>
+</head>
+<body>
+  <div id="grid"></div>
+  <script src="renderer.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+{
+  "name": "alerts-grid",
+  "version": "1.0.0",
+  "description": "4 карти повітряних тривог в одному вікні (2×2). Кросплатформна версія на Electron.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder",
+    "dist:win": "electron-builder --win",
+    "dist:win:zip": "electron-builder --win zip --x64",
+    "dist:linux": "electron-builder --linux"
+  },
+  "author": "kokosik8998 <kokosik8998@users.noreply.github.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.kokosik.alertsgrid",
+    "productName": "AlertsGrid",
+    "files": [
+      "main.js",
+      "renderer.js",
+      "index.html",
+      "icon.png"
+    ],
+    "win": {
+      "target": ["nsis"],
+      "icon": "icon.ico",
+      "signAndEditExecutable": false
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true
+    },
+    "linux": {
+      "target": ["AppImage", "deb"],
+      "icon": "icon.png",
+      "category": "Utility",
+      "maintainer": "kokosik8998 <kokosik8998@users.noreply.github.com>"
+    }
+  }
+}
